@@ -14,10 +14,10 @@ app.use(bodyParser.json());
 // load routes
 app.use("/", route);
 
-// app.use(express.static(path.join(__dirname, "frontend/build")));
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "frontend/build/index.html"));
-// });
+app.use(express.static(path.join(__dirname, "frontend/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend/build/index.html"));
+});
 
 app.listen(port, () => {
   console.log(path.join(__dirname, "public/index.html"));

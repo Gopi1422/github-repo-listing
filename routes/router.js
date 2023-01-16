@@ -7,14 +7,14 @@ const route = express.Router();
  * @description for root route
  * @method GET /
  */
-route.get("/", (req, res) => {
-  res.send("Server is working fine...");
-});
+// route.get("/", (req, res) => {
+//   res.send("Server is working fine...");
+// });
 
 /**
  * @description for getting user data
- * @method GET /:username
+ * @method GET /api/:username
  */
-route.get("/:username", getUserData);
+route.get("/api/:username", getUserData);
 
 export default route;
