@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // load routes
-app.use("/", route);
+app.use("api/", route);
 
 app.use(express.static(path.join(__dirname, "frontend/build")));
 app.get("*", (req, res) => {
