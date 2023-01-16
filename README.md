@@ -61,7 +61,7 @@ Home Page
 Search Valid GitHub Username
 ![Output-2](https://github.com/Gopi1422/github-repo-listing/blob/c1e1154baebcae62a2002b3334ca2dc48dcfd8bf/screenshots/2.png)
 ![Output-3](https://github.com/Gopi1422/github-repo-listing/blob/c1e1154baebcae62a2002b3334ca2dc48dcfd8bf/screenshots/3.png)
-![Output-4](https://github.com/Gopi1422/github-repo-listing/blob/c1e1154baebcae62a2002b3334ca2dc48dcfd8bf/screenshots/4.png)
+![Output-4](https://github.com/Gopi1422/github-repo-listing/blob/a993383acf6b8f16813ce181d9887e4714b5a9c3/screenshots/4.png)
 ![Output-5](https://github.com/Gopi1422/github-repo-listing/blob/c1e1154baebcae62a2002b3334ca2dc48dcfd8bf/screenshots/5.png)
 
 Search Invalid GitHub Username
