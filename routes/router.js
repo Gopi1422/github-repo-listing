@@ -7,9 +7,9 @@ const route = express.Router();
  * @description for root route
  * @method GET /
  */
-route.get("/", (req, res) => {
-  res.send("Server is working fine...");
-});
+// route.get("/", (req, res) => {
+//   res.send("Server is working fine...");
+// });
 
 /**
  * @description for getting user data
