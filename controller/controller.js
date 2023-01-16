@@ -22,7 +22,7 @@ export const getUserData = async (req, res) => {
       bio: data[0].bio,
       location: data[0].location,
       github_link: data[0].html_url,
-      twitter_link: "https://twitter.com/" + data[0].twitter_link,
+      twitter_link: "https://twitter.com/" + data[0].twitter_username,
       message: data[0].message,
     };
 
