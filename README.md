@@ -3,11 +3,11 @@
 There are 2 parts to the assignment: 
 
 * Frontend 
-  ** Angular single-page application (SPA) that takes a GitHub username as input and displays the public Github repositories belonging to the user. 
-  ** If the username is invalid, should show an error page indicating an invalid GitHub username.
+  * Angular single-page application (SPA) that takes a GitHub username as input and displays the public Github repositories belonging to the user. 
+  * If the username is invalid, should show an error page indicating an invalid GitHub username.
 * Backend
-  > REST API service (NodeJS)
-  > Each endpoint has to internally call Github’s APIs to fetch the data required for the frontend application to work.
+  * REST API service (NodeJS)
+  * Each endpoint has to internally call Github’s APIs to fetch the data required for the frontend application to work.
   
 ## Run Locally
 
