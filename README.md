@@ -27,7 +27,6 @@ There are 2 parts to the project:
 
 > Install Server dependencies
 ```bash
-  cd backend/
   npm install
 ```
 
@@ -41,7 +40,6 @@ There are 2 parts to the project:
 4. Start the server
 
 ```bash
-  cd backend/
   npm start
 ```
 
