@@ -1,18 +1,20 @@
 import express from "express";
-import path from "path";
 
 import { getUserData } from "../controller/controller.js";
 const route = express.Router();
-const __dirname = path.resolve();
 
-// route.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "public/index.html"));
-// });
 /**
- * @description for Root Route
+ * @description for root route
  * @method GET /
+ */
+route.get("/", (req, res) => {
+  res.send("Server is working fine...");
+});
+
+/**
+ * @description for getting user data
+ * @method GET /:username
  */
 route.get("/:username", getUserData);
 
-// module.exports = route;
 export default route;
