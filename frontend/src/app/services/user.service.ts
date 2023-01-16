@@ -11,6 +11,6 @@ export class UserService {
   }
 
   getUser(username: string) {
-    return this.http.get(`api/${username}`); // ${this.ROOT_URL}/
+    return this.http.get(`${this.ROOT_URL}/api/${username}`); // ${this.ROOT_URL}/
   }
 }

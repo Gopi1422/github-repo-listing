@@ -1,15 +1,13 @@
 import express from "express";
 
-import { getUserData } from "../controller/controller.js";
+import { getUserData, getUserDemo } from "../controller/controller.js";
 const route = express.Router();
 
 /**
- * @description for root route
- * @method GET /
+ * @description for demo route
+ * @method GET /api/demo/:username
  */
-// route.get("/", (req, res) => {
-//   res.send("Server is working fine...");
-// });
+route.get("/api/demo/:username", getUserDemo);
 
 /**
  * @description for getting user data

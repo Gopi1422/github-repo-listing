@@ -50,7 +50,7 @@ describe('UserService', () => {
       expect(response.body).toEqual(dummyUser);
     });
 
-    const req = httpMock.expectOne(`${service.ROOT_URL}/${username}`);
+    const req = httpMock.expectOne(`${service.ROOT_URL}/api/${username}`);
     expect(req.request.method).toEqual('GET');
     req.flush(new HttpResponse({ status: 200, body: dummyUser }));
   });
@@ -67,7 +67,7 @@ describe('UserService', () => {
       expect(response.body).toEqual(errorDetails);
     });
 
-    const req = httpMock.expectOne(`${service.ROOT_URL}/${username}`);
+    const req = httpMock.expectOne(`${service.ROOT_URL}/api/${username}`);
     expect(req.request.method).toEqual('GET');
     req.flush(new HttpResponse({ status: 500, body: errorDetails }));
   });
@@ -88,7 +88,7 @@ describe('UserService', () => {
       },
     });
 
-    const req = httpMock.expectOne(`${service.ROOT_URL}/${username}`);
+    const req = httpMock.expectOne(`${service.ROOT_URL}/api/${username}`);
     // Respond with mock error
     req.flush('404 error', { status: 404, statusText: 'Not Found' });
   });

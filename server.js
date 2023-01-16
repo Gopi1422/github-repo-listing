@@ -20,6 +20,6 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(path.join(__dirname, "public/index.html"));
+  // console.log(path.join(__dirname, "public/index.html"));
   console.log(`Server listening on port ${port}!`);
 });

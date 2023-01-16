@@ -56,13 +56,33 @@ export const getUserData = async (req, res) => {
     }
 
     user.repos = repos;
-    // console.log(user);
     res.json(user);
   } catch (error) {
     res.status(500).send({
       message:
         error.message || "Error occurred while retriving user information!!",
       code: "Internal Server Error",
+    });
+  }
+};
+
+// Used only for failure test case = "Invalid UserId Provided and server returns error 404"
+export const getUserDemo = async (req, res) => {
+  const username = req.params.username;
+  try {
+    let data = await fetch(`https://api.github.com/users/${username}`);
+    data = await data.json();
+    console.log(data);
+
+    if (data.message) {
+      throw new Error("Given Username not found!!");
+    }
+  } catch (error) {
+    res.status(404).send({
+      message:
+        error.message ||
+        "Error occurred while retriving user demo information!!",
+      code: "User Not Found",
     });
   }
 };
