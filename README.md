@@ -9,6 +9,9 @@ There are 2 parts to the project:
   * REST API service (NodeJS)
   * Each endpoint has to internally call Github’s APIs to fetch the data required for the frontend application to work.
   
+**Deployed Project Link:** https://busy-lime-rooster-fez.cyclic.app
+
+
 ## Run Locally
 
 1. Clone the project
