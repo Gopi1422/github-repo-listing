@@ -13,8 +13,8 @@ const route = express.Router();
 
 /**
  * @description for getting user data
- * @method GET /:username
+ * @method GET /api/:username
  */
-route.get("/:username", getUserData);
+route.get("/api/:username", getUserData);
 
 export default route;
