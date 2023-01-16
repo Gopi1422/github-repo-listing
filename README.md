@@ -1,6 +1,6 @@
 # GitHub Repositories Listing
 
-There are 2 parts to the assignment: 
+There are 2 parts to the project: 
 
 * Frontend 
   * Angular single-page application (SPA) that takes a GitHub username as input and displays the public Github repositories belonging to the user. 
