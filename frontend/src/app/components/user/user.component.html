@@ -1,30 +1,26 @@
 <app-header (displayData)="displayUser($event)"></app-header>
-<div class="container" *ngIf="user.twitter_link; else noData">
-  <div *ngIf="!user.message; else notFound">
-    <div class="container-fluid">
-      <app-user-details [user]="user"></app-user-details>
-      <app-user-repo [user]="user"></app-user-repo>
-    </div>
+<div class="container" *ngIf="user.github_link; else noData">
+  <!-- <div *ngIf="!user.message; else notFound"> -->
+  <div class="container-fluid">
+    <app-user-details [user]="user"></app-user-details>
+    <app-user-repo [user]="user"></app-user-repo>
   </div>
-  <ng-template #notFound>
+  <!-- </div> -->
+  <!-- <ng-template #notFound>
     <div class="container text-center p-5">
       <div class="card p-5 m-5" style="background: #3caa61">
         <h2>
-          {{
-            user.message === "Not Found"
-              ? "Invalid GitHub Username"
-              : "GitHub API Limit Exceeded!! Reset Time is 1 hour, So please check it
-          after 1 hour."
-          }}
+          GitHub API Limit Exceeded!! Reset Time is 1 hour, So please check it
+          after 1 hour.
         </h2>
       </div>
     </div>
-  </ng-template>
+  </ng-template> -->
 </div>
 <ng-template #noData>
   <div class="container text-center p-5">
     <div class="card p-5 m-5" style="background: #3caa61">
-      <h1>No Data to Display!!</h1>
+      <h2>{{ errorMessage ? errorMessage : "No Data to Display!!" }}</h2>
     </div>
   </div>
 </ng-template>

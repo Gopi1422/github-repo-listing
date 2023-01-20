@@ -16,6 +16,14 @@ export const getUserData = async (req, res) => {
       );
     });
 
+    if (data[0].message == "Not Found") {
+      throw new Error("Invalid GitHub Username!!");
+    } else if (data[0].message || data[1].message) {
+      throw new Error(
+        "GitHub API Limit Exceeded!! Reset Time is 1 hour, So please check it after 1 hour."
+      );
+    }
+
     const user = {
       name: data[0].name,
       profile_image: data[0].avatar_url,
@@ -52,17 +60,28 @@ export const getUserData = async (req, res) => {
     });
 
     for (let i = 0; i < repos.length; i++) {
+      if (languageData[i].message) {
+        throw new Error(
+          "GitHub API Limit Exceeded!! Reset Time is 1 hour, So please check it after 1 hour."
+        );
+      }
       repos[i].languages = Object.keys(languageData[i]);
     }
 
     user.repos = repos;
     res.json(user);
   } catch (error) {
-    res.status(500).send({
-      message:
-        error.message || "Error occurred while retriving user information!!",
-      code: "Internal Server Error",
-    });
+    if (error.message === "Invalid GitHub Username!!") {
+      res.status(404).send({
+        message:
+          error.message || "Error occurred while retriving user information!!",
+      });
+    } else {
+      res.status(429).send({
+        message:
+          error.message || "Error occurred while retriving user information!!",
+      });
+    }
   }
 };
 
